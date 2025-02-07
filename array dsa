@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+// Function to find the maximum element in an array
+int findMaxElement(int arr[], int size) {
+    int maxElement = arr[0]; // Assume the first element is the largest
+
+    for (int i = 1; i < size; i++) {
+        if (arr[i] > maxElement) {
+            maxElement = arr[i]; // Update maxElement if a larger value is found
+        }
+    }
+    return maxElement;
+}
+
+int main() {
+    int arr[] = {10, 45, 23, 89, 56, 77, 12}; // Example array
+    int size = sizeof(arr) / sizeof(arr[0]);  // Calculate the size of the array
+
+    int maxElement = findMaxElement(arr, size);
+    cout << "The largest element in the array is: " << maxElement << endl;
+
+    return 0;
+}
